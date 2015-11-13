@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCostosServerVIP", "WebCostosServerVIP\WebCostosServerVIP.csproj", "{F2669E34-23C7-4B62-A27D-25013A9750D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dal", "Dal\Dal.csproj", "{0A48DB00-E979-40D7-B7B5-32744C5A816B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2669E34-23C7-4B62-A27D-25013A9750D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2669E34-23C7-4B62-A27D-25013A9750D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2669E34-23C7-4B62-A27D-25013A9750D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2669E34-23C7-4B62-A27D-25013A9750D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A48DB00-E979-40D7-B7B5-32744C5A816B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A48DB00-E979-40D7-B7B5-32744C5A816B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A48DB00-E979-40D7-B7B5-32744C5A816B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A48DB00-E979-40D7-B7B5-32744C5A816B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
