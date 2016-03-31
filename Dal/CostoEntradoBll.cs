@@ -15,11 +15,9 @@ namespace Dal
 
        public static string CostoEntrado(string Proyecto, string Fecha)
        {
-
-
            string sSql = "SELECT 0,obradet.obrdcodi+obradet.obrdpres+liqmate.liqmcapi+liqmate.liqmdest+liqmate.liqmmate AS 'Referencia1', obradet.obrdnomb AS 'NombrePpto', liqmate.liqmfech AS 'fecha', liquida.liqupedi AS 'orden', liquida.liqunume AS '#liqu', liquida.liquprov AS 'codterc', tercero.tercnomb AS 'Nombre', liqmate.liqmcapi AS 'cap', capitul.capidesc AS 'Nombrecap', liqmate.liqmdest AS 'apu', unitari.unitdesc AS 'NombreAPU', insumos.insucodi AS 'Codigo', insumos.insudesc AS 'Descripcion', insumos.insuunid AS 'Unidad', liqmate.liqmliqu AS 'cantent', ((liqmate.liqmunit*(1+liqmate.liqmpiva/100))+((liqmate.liqmadmv/liqmate.liqmliqu)+(liqmate.liqmimpv/liqmate.liqmliqu)+(liqmate.liqmutiv/liqmate.liqmliqu)+(liqmate.liqmivav/liqmate.liqmliqu))) AS 'vrunitentrado', (((liqmate.liqmliqu*liqmate.liqmunit)*(1+liqmate.liqmpiva/100))+(liqmate.liqmimpv+liqmate.liqmadmv+liqmate.liqmutiv+liqmate.liqmivav)) AS 'costoentrado', liquida.liquusua AS 'usuario'," + Fecha
            + " FROM capitul capitul, insumos insumos, liqmate liqmate, liquida liquida, obradet obradet, obraspr obraspr, tercero tercero, unitari unitari"
-           + " WHERE obradet.obrdcodi = liquida.liqusucu AND obradet.obrdcodi = obraspr.obracodi AND obradet.obrdpres = liquida.liqupres AND liquida.liqupres = liqmate.liqmpres AND liquida.liqunume = liqmate.liqmnume AND liquida.liqusucu = liqmate.liqmsucu AND liquida.liquprov = tercero.terccodi AND liqmate.liqmcapi = capitul.capicomp AND liqmate.liqmdest = unitari.unitcodi AND insumos.insucodi = liqmate.liqmmate AND ((liquida.liquanul<>1) AND (liqmate.liqmnobl<>1) AND (liquida.liqufech<={d '2015-12-31'}) AND (obradet.obrdcodi='" + Proyecto + "') AND (capitul.capiobra=liqmate.liqmsucu+liqmate.liqmpres And capitul.capiobra<>''))";
+           + " WHERE obradet.obrdcodi = liquida.liqusucu AND obradet.obrdcodi = obraspr.obracodi AND obradet.obrdpres = liquida.liqupres AND liquida.liqupres = liqmate.liqmpres AND liquida.liqunume = liqmate.liqmnume AND liquida.liqusucu = liqmate.liqmsucu AND liquida.liquprov = tercero.terccodi AND liqmate.liqmcapi = capitul.capicomp AND liqmate.liqmdest = unitari.unitcodi AND insumos.insucodi = liqmate.liqmmate AND ((liquida.liquanul<>1) AND (liqmate.liqmnobl<>1) AND (liquida.liqufech<={d '2020-12-31'}) AND (obradet.obrdcodi='" + Proyecto + "') AND (capitul.capiobra=liqmate.liqmsucu+liqmate.liqmpres And capitul.capiobra<>''))";
            return sSql;
        }
 
